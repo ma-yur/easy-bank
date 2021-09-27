@@ -1,2 +1,2 @@
-## view project - https://github.com/ma-yur/easy-bank/settings/pages
+## view project - https://ma-yur.github.io/easy-bank/
 
