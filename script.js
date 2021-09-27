@@ -1,0 +1,9 @@
+document.querySelector('#hamburger').addEventListener("click",()=>{
+    console.log("clicked");
+    if(document.getElementsByClassName("nav_mobile")[0].style.display!=="flex"){
+        document.getElementsByClassName("nav_mobile")[0].style.display="flex"
+    }
+    else{
+        document.getElementsByClassName("nav_mobile")[0].style.display="none"
+    }
+})
