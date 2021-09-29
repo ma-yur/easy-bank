@@ -1,6 +1,21 @@
-@import "./base";
+@import "base/base";
+@import "base/topography";
+@import "base/utilities";
 
-@import "./components";
 
-@import "./layout";
+@import "./components/components";
+@import "./components/buttons";
+@import "./components/article";
+
+
+
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./layouts/more";
+@import "./layouts/articles";
+@import "./layouts/footer";
+
+
+
+
 

@@ -1,0 +1,44 @@
+.logo{
+    width: 100%;
+}
+
+
+.hero_img{
+    background-image: url('..//images/bg-intro-mobile.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   img {
+    overflow: hidden;
+    margin-top: -10rem;
+    width: 100%;
+    height: 100%;
+   }
+}
+
+
+
+.feature{
+    & > *{
+        text-align: center;
+    }
+    &_desc,
+    &_logo,
+    &_title{
+        margin-bottom: 1.2rem ;
+    }
+}
+
+.footer_social-media-links{
+    display: flex;
+    justify-content: space-around;
+    max-width: 17rem;
+    align-items: center;
+    margin:  2rem auto;
+}
+
+.footer_logo{
+    display: inline-block;
+    width: 20rem;
+    filter: opacity(0.5) drop-shadow(0 0 0 rgb(255, 255, 255));
+}

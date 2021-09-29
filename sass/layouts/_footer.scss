@@ -1,0 +1,47 @@
+.section_footer {
+    background-color: var(--color-primary-blue);
+    width: 100%;
+    display: flex;
+  }
+  
+.footer {
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+      @media only screen and (min-width: 900px) {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &_nav{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-right:auto;
+          & > * {
+            margin-top: 1rem;
+            margin-left: 5rem;
+          }
+        }
+      
+       
+    }
+  
+      &_btn {
+          margin-bottom: 2rem;
+      }
+      &_logo {
+          fill: white;
+          color: white;
+          padding: 2rem;
+      }
+      &_nav_item{
+        display: inline-block;
+        width: 60%;
+        text-align: center;
+        text-decoration: none;
+        color: var(--color-grayish-blue-1);
+        font-size: 1.2rem;
+        margin-bottom: 1.2rem;
+      }
+  }

@@ -1,0 +1,15 @@
+.btn_main{
+    display: inline-block;
+    outline: none;
+    border: none;
+    color: white;
+    background:linear-gradient(to right,var(--color-primary-green), var(--color-primary-cyan)); 
+    font-size: 1.7rem;
+    padding: 1.2rem 2.5rem;
+    border-radius:100px ;
+    cursor: pointer;
+    transition: all .2s;
+    &:hover{
+        transform: scale(1.03);
+    }
+}
