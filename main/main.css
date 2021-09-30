@@ -32,12 +32,30 @@ body {
   line-height: 1.6;
   min-height: 100vh;
   background-color: var(--color-gray-light);
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  /*dim the background*/
 }
 
 .heading-primary {
   font-size: 4.3rem;
   line-height: 1.3;
   color: var(--color-primary-blue);
+}
+
+@media only screen and (min-width: 750px) {
+  .heading-primary {
+    font-size: 6rem;
+  }
 }
 
 .heading-secondary {
@@ -47,6 +65,12 @@ body {
   line-height: 1.2;
 }
 
+@media only screen and (min-width: 750px) {
+  .heading-secondary {
+    font-size: 4.5rem;
+  }
+}
+
 .heading-teritory {
   color: var(--color-primary-blue);
   font-size: 2.5rem;
@@ -54,10 +78,22 @@ body {
   line-height: 1.2;
 }
 
+@media only screen and (min-width: 750px) {
+  .heading-teritory {
+    font-size: 3rem;
+  }
+}
+
 .paragraph {
   color: var(--color-grayish-blue-2);
   font-size: 1.5rem;
   line-height: 1.7;
+}
+
+@media only screen and (min-width: 750px) {
+  .paragraph {
+    font-size: 1.7rem;
+  }
 }
 
 .u-background-light {
@@ -73,25 +109,16 @@ body {
 }
 
 .hero_img {
-  background-image: url("..//images/bg-intro-mobile.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.hero_img img {
   overflow: hidden;
   margin-top: -10rem;
-  width: 100%;
-  height: 100%;
 }
 
 .feature > * {
   text-align: center;
 }
 
-.feature_desc, .feature_logo, .feature_title {
-  margin-bottom: 1.2rem;
+.feature_logo, .feature_title {
+  margin-bottom: 3.7rem;
 }
 
 .footer_social-media-links {
@@ -112,6 +139,10 @@ body {
   width: 20rem;
   -webkit-filter: opacity(0.5) drop-shadow(0 0 0 white);
           filter: opacity(0.5) drop-shadow(0 0 0 white);
+}
+
+.social-icon:hover {
+  fill: var(--color-primary-green);
 }
 
 .btn_main {
@@ -135,6 +166,8 @@ body {
 }
 
 .article {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   -webkit-transition: all .2s;
   transition: all .2s;
 }
@@ -162,13 +195,14 @@ body {
 
 .article_img {
   width: 100%;
+  height: 50%;
   margin: 0 auto;
   margin-bottom: 2rem;
 }
 
 .article_image {
-  height: 30rem;
   width: 100%;
+  height: 100%;
   border-radius: 0.5rem;
 }
 
@@ -191,17 +225,19 @@ body {
   margin-bottom: 1rem;
 }
 
+.article_title:hover {
+  color: var(--color-primary-green);
+}
+
 .article_desc {
   color: var(--color-grayish-blue-2);
   font-size: 1.4rem;
   text-align: left;
-  margin-bottom: 2rem;
 }
 
 .nav {
   margin: 0 auto;
-  max-width: 90%;
-  height: 10vh;
+  max-width: 100%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -213,11 +249,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   background-color: #fff;
+  padding: 0 10%;
 }
 
 @media only screen and (min-width: 1000px) {
   .nav {
-    max-width: 80%;
+    max-width: 100%;
   }
 }
 
@@ -228,8 +265,8 @@ body {
 
 .nav_hamburger {
   position: absolute;
-  top: 4rem;
-  right: 0;
+  top: 2.5rem;
+  right: 2.2rem;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -253,7 +290,9 @@ body {
   width: 80%;
   text-align: center;
   padding: 2.5rem;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   border-radius: 1rem;
 }
 
@@ -266,8 +305,8 @@ body {
 }
 
 .nav_mobile a:hover {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .nav_desktop {
@@ -282,17 +321,26 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 40%;
-          flex: 0 0 40%;
+      -ms-flex: 0 0 30%;
+          flex: 0 0 30%;
+  height: 100%;
 }
 
 .nav_desktop a {
   text-decoration: none;
-  color: var(--color-primary-blue);
+  color: var(--color-grayish-blue-2);
   font-size: 1.5rem;
   display: inline-block;
   -webkit-transition: all .2s;
   transition: all .2s;
+  padding: auto 0 auto 0;
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav_desktop a:hover {
@@ -301,6 +349,7 @@ body {
   border-image-source: linear-gradient(to right, var(--color-primary-green), var(--color-primary-cyan));
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
+  color: var(--color-primary-blue);
 }
 
 @media only screen and (max-width: 1000px) {
@@ -309,21 +358,29 @@ body {
   }
 }
 
+.hide {
+  display: none;
+}
+
 .hero {
   text-align: center;
-  width: 90%;
   margin: 0 auto;
-  margin-bottom: 5rem;
 }
 
 .hero img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
+  .hero img {
+    margin-left: 30rem;
+    margin-top: 20rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
   .hero {
-    width: 80%;
+    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -345,6 +402,7 @@ body {
             flex: 1;
   }
   .hero_box {
+    margin-left: 10%;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 30%;
             flex: 0 0 30%;
@@ -370,60 +428,42 @@ body {
 
 @media only screen and (min-width: 1000px) {
   .more {
+    padding: 10rem 0;
     width: 80%;
-    height: 60vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
 }
 
+.about > * {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
 @media only screen and (min-width: 1000px) {
   .about {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 100%;
-            flex: 1 0 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
   }
-  .about_title {
-    text-align: left;
-  }
-  .about_desc {
+  .about > * {
     text-align: start;
-  }
-}
-
-.about_title {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-@media only screen and (min-width: 750px) {
-  .about_title {
-    text-align: left;
-  }
-}
-
-.about_desc {
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-@media only screen and (min-width: 750px) {
-  .about_desc {
-    text-align: start;
+    margin-bottom: 1.5rem;
   }
 }
 
 @media only screen and (min-width: 750px) {
   .features {
+    padding: 5rem 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -465,7 +505,7 @@ body {
 }
 
 .articles_heading {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 @media only screen and (min-width: 900px) {
@@ -481,6 +521,7 @@ body {
             justify-content: space-between;
   }
   .articles_heading {
+    text-align: left;
     -webkit-box-flex: 1;
         -ms-flex: 1 0 100%;
             flex: 1 0 100%;
@@ -528,7 +569,7 @@ body {
   }
   .footer_nav > * {
     margin-top: 1rem;
-    margin-left: 5rem;
+    margin-left: 9rem;
   }
 }
 
@@ -537,8 +578,6 @@ body {
 }
 
 .footer_logo {
-  fill: white;
-  color: white;
   padding: 2rem;
 }
 
@@ -550,5 +589,47 @@ body {
   color: var(--color-grayish-blue-1);
   font-size: 1.2rem;
   margin-bottom: 1.2rem;
+}
+
+.footer_nav_item:hover {
+  color: var(--color-primary-green);
+}
+
+@media only screen and (min-width: 900px) {
+  .footer_nav_item {
+    text-align: start;
+    font-size: 1.4rem;
+  }
+}
+
+.section-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.section-hero {
+  background-image: url("..//images/bg-intro-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  height: 100%;
+  background-position: right top;
+  padding-bottom: 10rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  .section-hero {
+    background-image: url("..//images/bg-intro-desktop.svg");
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: right -65% top 60%;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .section-hero {
+    background-size: auto;
+  }
 }
 /*# sourceMappingURL=main.css.map */

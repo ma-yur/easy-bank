@@ -5,18 +5,22 @@
         text-align: center;
     }
     &_heading{
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
+     
     }
 
   @media only screen and (min-width: 900px) {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+    justify-content: space-between;
+   
+    &_heading{
+      text-align: left;
+      flex: 1 0 100%;
+    }
 
-      justify-content: space-between;
-      &_heading{
-        flex: 1 0 100%;
-      } 
+     
   }
  
 }

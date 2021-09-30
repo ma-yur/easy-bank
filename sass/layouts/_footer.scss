@@ -13,6 +13,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         &_nav{
           display: flex;
           align-items: center;
@@ -20,19 +21,17 @@
           margin-right:auto;
           & > * {
             margin-top: 1rem;
-            margin-left: 5rem;
+            margin-left: 9rem;
+
           }
-        }
       
-       
+        }
     }
   
       &_btn {
           margin-bottom: 2rem;
       }
       &_logo {
-          fill: white;
-          color: white;
           padding: 2rem;
       }
       &_nav_item{
@@ -43,5 +42,15 @@
         color: var(--color-grayish-blue-1);
         font-size: 1.2rem;
         margin-bottom: 1.2rem;
+
+        &:hover{
+          color:var(--color-primary-green);
+        }
+
+      @media only screen and (min-width: 900px) {
+       text-align: start;
+       font-size: 1.4rem;
+      }
+
       }
   }

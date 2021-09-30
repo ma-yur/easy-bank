@@ -5,58 +5,58 @@
     width: 90%;
     margin: 0 auto;
     @media only screen and (min-width: 1000px) {
+      padding: 10rem 0;
+
       width: 80%;
-      height: 60vh;
+      // height: 60vh;
+      // padding: 15rem 0;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       flex-wrap: wrap;
     }
 }
 
 .about {
+
+      // &_title {
+      //   text-align: center;
+      //   margin-bottom: 1.5rem;
+      // }
+      // &_desc {
+      //   text-align: center;
+      //   margin-bottom: 1.5rem; 
+      // }
+
+  & > *{
+    text-align: center;
+      margin-bottom: 1.5rem;
+  }
     @media only screen and (min-width: 1000px) {
-       flex : 1 0 100%;
-       &_title {
-        text-align: left;
-      }
-      &_desc {
+      flex : 0 0 50%;
+      & > *{
         text-align: start;
+        margin-bottom: 1.5rem;
       }
-    }
-
-    &_title {
-        text-align: center;
-        margin-bottom: 1.5rem;
-        @media only screen and (min-width: 750px) {
-        text-align: left;
-        }
-    }
-    &_desc {
-        text-align: center;
-        margin-bottom: 1.5rem;
-
-        @media only screen and (min-width: 750px) {
-        text-align: start;
-        }
     }
 }
+
+
 .features{
-  @media only screen and (min-width: 750px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
-        
-   
-  .feature{
-    flex: 0 0 40%;
-  }    
-}
+    @media only screen and (min-width: 750px) {
+      padding: 5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; 
+      .feature{
+        flex: 0 0 40%;
+      }    
+    }
     @media only screen and (min-width: 1000px) {
       flex-wrap: nowrap;
-        & *{
-          text-align: start;
-        }
+      & *{
+        text-align: start;
+      }
       .feature{
         flex: 0 0 20%;
       }    
