@@ -381,8 +381,15 @@ body {
 
 @media only screen and (min-width: 1000px) {
   .hero img {
-    margin-left: 30rem;
+    margin-left: 25rem;
     margin-top: 20rem;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .hero img {
+    margin-left: 22rem;
+    margin-top: 22rem;
   }
 }
 
