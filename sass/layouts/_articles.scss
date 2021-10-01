@@ -6,21 +6,18 @@
     }
     &_heading{
       margin-bottom: 3rem;
-     
     }
 
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
     max-width: 80%;
     justify-content: space-between;
-   
+
     &_heading{
       text-align: left;
       flex: 1 0 100%;
     }
-
-     
   }
  
 }

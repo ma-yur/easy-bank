@@ -16,7 +16,6 @@
       align-items: center;
       text-align: left;
       height: 70vh;
-
       &_img {
         order: 1;
         flex: 1;
@@ -24,7 +23,7 @@
 
       &_box {
         margin-left: 10%;
-        flex: 0 0 30%;
+        flex: 0 0 35%;
         margin-right: 2rem;
       }
   
@@ -37,6 +36,5 @@
       margin-bottom: 2rem;
       padding: 0.5rem;
     }
-    &_btn {
-    }
+  
   }
